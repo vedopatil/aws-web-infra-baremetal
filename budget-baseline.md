@@ -70,3 +70,7 @@ Configured 3 alert thresholds using the SNS topic:
 - No IAM actions or triggers are applied — intended for visibility only.
 - Tags allow cost association and filtering per project.
 
+Why should billing alerts be the first thing in any AWS infrastructure?
+To avoid losing a ton of money on unused resources, and surprisingly _at scale_, costing an amount, which keeps any mistake away from being called a mistake. 
+Eg-1, A startup due to unchecked design, caused 5000 S3 reads, per user visit, where egress costs are the only costs, and the only costs used by CSPs to lock you in their services, so 5000*cost_per_gb*data_extracted_in_gb, became essentially a burn to the pocket, and made a whooping 70K USD bill.
+Eg-2, An infinite loop was run by an intern, in an Elastic Beanstalk, the app went to prod, and basically burned a few servers, and incurred a 100K bill; an alert would've stopped this from happening, and an added action would've definitely killed the stopped Beanstalk automatically leving no chance of this mishaps.
