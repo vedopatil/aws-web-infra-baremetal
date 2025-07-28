@@ -13,9 +13,9 @@
 - Confidentiality = public
 - Purpose = website / logs / billing / monitor
 
-Why do naming conventions and tags matter in a growing infra?
+Why do naming conventions and tags matter in a growing infrastructure?
 why? -> Helps group the resources
 
 if not done? -> 1. A total mess of resource tracking and grouping
-                2. Many tag dependent functionalities become toothless
-                3. Due to tagging failure, a small leak in overal system may result in bankruptcy due to "small" mistake.
+                2. Many tag-dependent functionalities become toothless
+                3. Due to tagging failure, a small leak in the overall system may result in bankruptcy due to a "small" mistake.
