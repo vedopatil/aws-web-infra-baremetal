@@ -9,7 +9,7 @@ Why document before building?
 
 
 What is the principle of least privilege, and how does it apply here?
-A zero-trust policy, where particular and required privileges must be given to all the stakeholders, ensures prevention of unauthorised access and malpractices in the cloud.
+A zero-trust policy, where particular and required privileges must be given to all the stakeholders, ensures prevention of unauthorised access and malpractices in the cloud. For our EC2-based website infra, EC2 instances must only have permission to write to S3 logs — not read all buckets. IAM roles must be tightly scoped to each task, like monitoring or autoscaling. For example, if an IAM User has a task of only adding filtered files to the S3 bucket, he should not be given access to read other files in the Bucket, unles specifically required.
 
 Why is separating environments (dev, prod) non-negotiable even in early stages?
 A mistake costs very less when done in a controlled, closed environment, dev environment is exactly the same, multiple tests can be carried out, mistakes cost less; prod is where real business goes on, a mistake here, can cost 100K, or even millions, and possibly whole business, so onlyverified things go into prod, this seperation allows maintaining quality, security and durability of the applications.
