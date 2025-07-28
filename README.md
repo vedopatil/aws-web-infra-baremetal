@@ -5,6 +5,8 @@ Why document before building?
 1. Discipline and project tracking
 2. A public repo, building and documenting in the open, not closed behind the walls
 3. A fixed scope of the project is set, and minimum requirements are now a compulsion, a tracked compulsion.
+4. Documentation is essential for team scaling, audits, and onboarding future engineers — no one should rely on your memory.
+
 
 What is the principle of least privilege, and how does it apply here?
 A zero-trust policy, where particular and required privileges must be given to all the stakeholders, ensures prevention of unauthorised access and malpractices in the cloud.
