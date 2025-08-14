@@ -1,4 +1,40 @@
 # aws-web-infra-baremetal
+
+A fully functional, production-simulated, and budget-controlled public website infrastructure.
+
+## Why Document Before Building?
+
+1. **Discipline & Project Tracking:** Ensures a systematic approach and clear progress monitoring.
+2. **Transparency:** Building and documenting in a public repository promotes openness and collaboration.
+3. **Defined Scope:** Establishes fixed project requirements, making minimum standards a tracked necessity.
+4. **Scalability & Onboarding:** Comprehensive documentation is essential for team growth, audits, and onboarding—no one should rely solely on memory.
+
+## Principle of Least Privilege
+
+A zero-trust policy is enforced, granting only the necessary privileges to each stakeholder. This approach prevents unauthorized access and reduces the risk of malpractice in the cloud.
+
+- **Example:** EC2 instances are permitted only to write to S3 logs, not to read all buckets.
+- **IAM Roles:** Each role is tightly scoped to its specific task (e.g., monitoring, autoscaling). For instance, an IAM user tasked with adding filtered files to an S3 bucket should not have access to read other files unless explicitly required.
+
+## Environment Separation: Dev vs. Prod
+
+Separating development and production environments is non-negotiable, even in early stages.
+
+- **Development:** Mistakes are less costly and can be safely tested in a controlled environment.
+- **Production:** Real business operations occur here; errors can result in significant financial loss or business failure. Only thoroughly tested and verified changes are promoted to production.
+- **CI/CD:** Dev environments enable continuous integration and deployment testing, ensuring failures are caught before reaching end users.
+
+## Importance of Cost Guardrails
+
+Deploying infrastructure without cost controls can lead to unmonitored spending and unexpected bills.
+
+- **Risks:** Misconfigured Auto Scaling Groups, overprovisioned EC2 instances, or improper S3 lifecycle management can rapidly inflate costs. AWS does not refund accidental usage.
+- **Examples:** Overprovisioned resources can consume budget unnecessarily, and failures to scale down can result in ongoing, avoidable expenses.
+
+---
+
+# Original Content
+
 A fully functional, production-simulated, budget-controlled public website infrastructure.
 
 Why document before building?
